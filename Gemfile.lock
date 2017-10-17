@@ -3,6 +3,7 @@ GEM
   specs:
     addressable (2.5.2)
       public_suffix (>= 2.0.2, < 4.0)
+    ansi (1.5.0)
     ast (2.3.0)
     bcrypt (3.1.11)
     bcrypt-ruby (3.1.5)
@@ -63,7 +64,9 @@ GEM
       dm-core (~> 1.2.0)
     do_postgres (0.10.17)
       data_objects (= 0.10.17)
+    docile (1.1.5)
     fastercsv (1.5.5)
+    hirb (0.7.3)
     json (1.8.6)
     json_pure (1.8.6)
     mime-types (3.1)
@@ -71,6 +74,7 @@ GEM
     mime-types-data (3.2016.0521)
     mini_portile2 (2.1.0)
     multi_json (1.12.2)
+    mustermann (1.0.1)
     nokogiri (1.7.1)
       mini_portile2 (~> 2.1.0)
     parallel (1.12.0)
@@ -79,6 +83,8 @@ GEM
     powerpack (0.1.1)
     public_suffix (3.0.0)
     rack (2.0.1)
+    rack-protection (2.0.0)
+      rack
     rack-test (0.6.3)
       rack (>= 1.0)
     rainbow (2.2.2)
@@ -105,7 +111,22 @@ GEM
       ruby-progressbar (~> 1.7)
       unicode-display_width (~> 1.0, >= 1.0.1)
     ruby-progressbar (1.8.1)
+    simplecov (0.14.1)
+      docile (~> 1.1.0)
+      json (>= 1.8, < 3)
+      simplecov-html (~> 0.10.0)
+    simplecov-console (0.4.1)
+      ansi
+      hirb
+      simplecov
+    simplecov-html (0.10.0)
+    sinatra (2.0.0)
+      mustermann (~> 1.0)
+      rack (~> 2.0)
+      rack-protection (= 2.0.0)
+      tilt (~> 2.0)
     stringex (1.5.1)
+    tilt (2.0.8)
     unicode-display_width (1.2.1)
     uuidtools (2.1.5)
     xpath (2.0.0)
@@ -118,9 +139,11 @@ DEPENDENCIES
   capybara
   data_mapper
   dm-postgres-adapter
-  rack
   rspec
   rubocop
+  simplecov
+  simplecov-console
+  sinatra
 
 RUBY VERSION
    ruby 2.4.2p198
